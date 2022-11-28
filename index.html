@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS import -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.css"
+    />
+    <!-- Bootstrap JS import -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.js"></script>
+    <!-- Font awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/chat.js"></script>
+
+    <!-- ADD NEW LANGUAGES FILES -->
+    <script src="js/setLanguage.js"></script>
+    <!-- Add your new language option here -->
+    <script src="languages/pt-br.js"></script>
+    <!-- <script src="languages/YOUR_LANGUAGE.js"></script> -->
+
+    <title>Resume ChatBot</title>
+  </head>
+  <body class="bg-dark" onload="startPage()">
+    <!-- Modal Change Language -->
+    <div
+      class="modal fade"
+      id="changeLanguage"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalTitle"></h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <button
+              type="button"
+              class="btn btn-primary btn-sm"
+              onclick="changeLanguage(0)"
+            >
+              PT-BR
+            </button>
+            <!-- add a new button with a number in the onclick function -->
+            <!-- <button type="button" class="btn btn-success btn-sm" onclick="changeLanguage(X)">LANGUAGE</button> -->
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-danger"
+              data-dismiss="modal"
+              id="modalBack"
+            ></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid h-100">
+      <div class="row justify-content-center h-100">
+        <div class="col-md-8 col-xl-6 chat">
+          <div class="card">
+            <div class="card-header msg_head">
+              <div class="d-flex bd-highlight">
+                <div class="img_cont">
+                  <img src="img/bot.jpg" class="rounded-circle user_img" />
+                  <span class="online_icon"></span>
+                </div>
+                <div class="user_info">
+                  <span id="title">Resume ChatBot</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-body msg_card_body" id="msg">
+              <!-- Mensagem -->
+            </div>
+
+            <div class="card-footer">
+              <div class="input-group">
+                <input
+                  type="text"
+                  id="userText"
+                  class="form-control type_msg"
+                  placeholder="..."
+                />
+                <div class="input-group-append">
+                  <span
+                    type="submit"
+                    class="input-group-text send_btn"
+                    id="send"
+                    ><i class="fas fa-location-arrow"></i
+                  ></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

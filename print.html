@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS import -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.css"
+    />
+    <!-- Bootstrap JS import -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.js"></script>
+    <!-- Font awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/printPage.js"></script>
+    <script src="js/setLanguage.js"></script>
+
+    <!-- ADD NEW LANGUAGES FILES -->
+    <script src="languages/pt-br.js"></script>
+    <!-- <script src="languages/YOUR_LANGUAGE.js"></script> -->
+
+    <title>Print Resume</title>
+  </head>
+  <style>
+    a:hover {
+      cursor: default;
+    }
+  </style>
+  <body onload="loadComponents()">
+    <div class="container p-5" style="line-height: 1.5">
+      <div>
+        <div class="row" id="head"></div>
+        <hr />
+        <div class="row" id="obje"></div>
+        <hr />
+      </div>
+
+      <div>
+        <h3 id="work">Work Experience</h3>
+        <div class="row" id="prof">
+          <!-- Professional -->
+        </div>
+        <hr />
+      </div>
+
+      <div>
+        <h3 id="education">Education</h3>
+        <div class="row" id="educ">
+          <!-- Education -->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
