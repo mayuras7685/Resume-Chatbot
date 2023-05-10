@@ -212,6 +212,45 @@ function saveObjective() {
   sessionStorage.setItem("objectiveUser", objectiveUser)
   document.getElementById("userText").value = "" //clean textarea
 
+  askPos()
+}
+
+//position
+function askPos() {
+  document.getElementById("userText").disabled = false //unblock textarea
+  var line1 = createDivs() + json.position.line1 + closeDivs()
+  var line2 = createDivs() + json.position.line2 + closeDivs()
+
+  document.getElementById("msg").innerHTML = line1 + line2
+  document.getElementById("send").onclick = function () {
+    savePos()
+  }
+}
+function savePos() {
+  var posUser = document.getElementById("userText").value
+  sessionStorage.setItem("posUser", posUser)
+  document.getElementById("userText").value = "" //clean textarea
+
+  askSkills()
+}
+
+//skills
+function askSkills() {
+  document.getElementById("userText").disabled = false //unblock textarea
+  var line1 = createDivs() + json.skills.line1 + closeDivs()
+  var line2 = createDivs() + json.skills.line2 + closeDivs()
+
+  document.getElementById("msg").innerHTML = line1 + line2
+
+  document.getElementById("send").onclick = function () {
+    saveSkills()
+  }
+}
+function saveSkills() {
+  var skillsUser = document.getElementById("userText").value
+  sessionStorage.setItem("skillsUser", skillsUser)
+  document.getElementById("userText").value = "" //clean textarea
+
   askWork1()
 }
 

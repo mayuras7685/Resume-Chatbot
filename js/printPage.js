@@ -14,6 +14,8 @@ function loadComponents() {
   var emailUser = sessionStorage.getItem("emailUser") //Email
   var driveUser = sessionStorage.getItem("driveUser") //Drive
   var objectiveUser = sessionStorage.getItem("objectiveUser") //Objective
+  var posUser = sessionStorage.getItem("posUser") //position
+  var skillsUser = sessionStorage.getItem("skillsUser") //skills
   //Work 1
   var Work1Name = sessionStorage.getItem("Work1Name") //Name of comapny
   var Work1Date = sessionStorage.getItem("Work1Date") //Time period
@@ -76,8 +78,12 @@ function loadComponents() {
     var drive = "Github: " + driveUser + "<br>"
   }
   // -----
+
+  // -----
   var objective =
     "<div class='col-12'>                                                        " +
+    "Position Apply for: " +
+    posUser +
     "           <h3>" +
     json.print.objective +
     "</h3>                                                       " +
@@ -86,6 +92,16 @@ function loadComponents() {
     "                           " +
     "           </p>                                                                    " +
     "       </div>                                                                      "
+
+  // ===================================================
+  // skills
+  // ==================================================
+
+  var skills =
+    "<div class='col-12'>                                                        " +
+    skillsUser +
+    "       </div>                                                                      "
+
   // ===================================================
   // WORK
   // ==================================================
@@ -262,6 +278,7 @@ function loadComponents() {
     document.getElementById("driveLicense").innerHTML = drive
   }
   document.getElementById("obje").innerHTML = objective
+  document.getElementById("skl").innerHTML = skills
   // Work Check
   if (work3 != null) {
     document.getElementById("prof").innerHTML = work1 + work2 + work3

@@ -42,6 +42,18 @@ ptbr = {
       "Now type something for us to put in the 'objective' session of the CV.",
   },
 
+  // position
+  position: {
+    line1: "Now type something for, positions are you looking for",
+    line2: "Ex. Python Developer",
+  },
+
+  // skills
+  skills: {
+    line1: "Add some relevent skills like Python, HTML, CSS, JS",
+    line2: "Ex. Python | HTML | CSS | JS",
+  },
+
   // Work experiences
   work1: {
     line1: "Now we'll talk about your <b>professional experiences</b>.",
